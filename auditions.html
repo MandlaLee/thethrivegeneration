@@ -1,8 +1,556 @@
-<!DOCTYPE html><html lang="en-ZA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Apply for ongoing Kingship Worship auditions as a vocalist, musician, songwriter, producer, sound engineer or creative."><title>Auditions | Kingship Worship</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/variables.css"><link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/layout.css"><link rel="stylesheet" href="assets/css/components.css"><link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/auditions.css"></head><body>
-<header class="site-header" data-header><div class="container header-inner"><a class="brand" href="index.html"><img src="assets/images/branding/logo-placeholder.svg" alt="Kingship Christian Centre placeholder logo"><span class="brand-copy"><strong>KINGSHIP</strong><small>CHRISTIAN CENTRE</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Open navigation</span></button><nav class="primary-nav" id="primary-navigation" data-nav><a href="index.html">Home</a><a href="about.html">About</a><div class="nav-dropdown" data-dropdown><button type="button" aria-expanded="false" data-dropdown-toggle>The Thrive Generation <span>⌄</span></button><div class="dropdown-menu"><a href="unithrive.html"><strong>UniThrive</strong></a><a href="prayer-ministry.html"><strong>The Prayer Ministry</strong></a><a href="thrive-in-two.html"><strong>Thrive In Two</strong></a><a href="kingship-worship.html"><strong>Kingship Worship</strong></a></div></div><a href="events.html">Events</a><a href="contact.html">Contact</a><a class="give-link" href="give.html">Give</a></nav></div></header>
-<main id="main-content"><section class="audition-hero"><div class="container"><p class="eyebrow light">Kingship Worship</p><h1>Auditions are <span>ongoing.</span></h1><p>Submit a short audition video through WhatsApp, or complete the application form below. We are looking for people who are gifted, teachable, committed and ready to grow spiritually and technically.</p><div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/27671160524?text=Hello%20Kingship%20Christian%20Centre%2C%20my%20name%20is%20____.%20I%20would%20like%20to%20submit%20my%20Kingship%20Worship%20audition%20video%20for%20the%20role%20of%20____." target="_blank" rel="noopener">Submit Video on WhatsApp</a><a class="btn btn-ghost" href="#audition-form">Apply Below</a></div></div></section>
-<section class="section"><div class="container"><div class="section-heading centered"><p class="eyebrow">Choose Your Method</p><h2>Submit quickly on WhatsApp or complete the full form.</h2></div><div class="choice-grid"><article class="choice-card"><strong>Submit on WhatsApp</strong><p>Send your name, audition role and short video directly to the church WhatsApp number.</p><a class="btn btn-dark" href="https://wa.me/27671160524?text=Hello%20Kingship%20Christian%20Centre%2C%20my%20name%20is%20____.%20I%20would%20like%20to%20submit%20my%20Kingship%20Worship%20audition%20video%20for%20the%20role%20of%20____." target="_blank" rel="noopener">Open WhatsApp</a></article><div class="choice-or">OR</div><article class="choice-card"><strong>Apply Below</strong><p>Complete the full application and upload your video, or paste a Drive, YouTube Unlisted or Dropbox link.</p><a class="btn btn-outline" href="#audition-form">Go to Form</a></article></div></div></section>
-<section class="section soft-section"><div class="container"><div class="section-heading"><p class="eyebrow">Keep the Video Simple</p><h2>Clear, honest and short is enough.</h2></div><div class="instruction-grid"><article><span>01</span><h3>Introduce Yourself</h3><p>Say your name and the role or instrument you are applying for.</p></article><article><span>02</span><h3>Perform Briefly</h3><p>Sing or play a short worship piece for approximately 60–90 seconds.</p></article><article><span>03</span><h3>Prioritise Clear Audio</h3><p>Use a quiet space. Professional equipment and heavy editing are not required.</p></article><article><span>04</span><h3>Share Securely</h3><p>Upload MP4, MOV or WebM, or paste a private shareable video link.</p></article></div></div></section>
-<section class="section"><div class="container"><div class="section-heading"><p class="eyebrow">Open Roles</p><h2>Vocal, musical and creative opportunities.</h2></div><div class="role-cloud"><span>Lead Vocalist</span><span>Soprano</span><span>Alto</span><span>Tenor</span><span>Keyboard</span><span>Drums</span><span>Bass Guitar</span><span>Lead Guitar</span><span>Acoustic Guitar</span><span>Songwriter</span><span>Producer</span><span>Sound Engineer</span><span>Photography</span><span>Videography</span><span>Media &amp; Design</span></div></div></section>
-<section class="section soft-section" id="audition-form"><div class="container audition-form-layout"><aside class="form-side"><p class="eyebrow">Application Form</p><h2>Tell us about your gift and availability.</h2><p>This form is already designed for a future Google Apps Script connection. Later, applicant details will go to Google Sheets while uploaded videos are stored in Google Drive.</p><div class="placeholder-note"><strong>Placeholder mode:</strong> the form currently validates information but does not send or upload anything.</div><p><strong>Need help?</strong><br><a href="tel:+27671160524">+27 67 116 0524</a></p></aside><form class="audition-form" id="kingship-audition-form" novalidate><div class="field-grid"><div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" required autocomplete="name"></div><div class="field"><label for="age">Age *</label><input id="age" name="age" type="number" min="13" max="100" required></div><div class="field"><label for="phone">Phone / WhatsApp *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div><div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required autocomplete="email"></div><div class="field"><label for="location">City or area *</label><input id="location" name="location" required></div><div class="field"><label for="category">Audition category *</label><select id="category" name="category" required><option value="">Select a role</option></select></div><div class="field"><label for="rangeInstrument">Vocal range / instrument</label><input id="rangeInstrument" name="rangeInstrument" placeholder="Example: Alto, keyboard, drums"></div><div class="field"><label for="availability">Rehearsal availability *</label><select id="availability" name="availability" required><option value="">Choose availability</option><option>Weekday evenings</option><option>Saturday mornings</option><option>Saturday afternoons</option><option>Sunday before service</option><option>Flexible / to be discussed</option></select></div><div class="field full"><label for="experience">Tell us briefly about your experience</label><textarea id="experience" name="experience" placeholder="Church, choir, band, production, media or informal experience is welcome."></textarea></div><div class="field full"><label for="motivation">Why would you like to join Kingship Worship? *</label><textarea id="motivation" name="motivation" required></textarea></div></div><div class="video-box"><h3>Submit your audition video</h3><p>Upload your video or paste a Google Drive, YouTube Unlisted or Dropbox link.</p><div class="field"><label for="auditionVideo">Upload your video</label><input type="file" id="auditionVideo" name="auditionVideo" accept="video/mp4,video/quicktime,video/webm"><small>Recommended: 60–90 seconds, up to 100 MB.</small></div><div class="form-divider"><span>or</span></div><div class="field"><label for="videoLink">Paste a video link</label><input type="url" id="videoLink" name="videoLink" placeholder="https://drive.google.com/... or unlisted YouTube / Dropbox link"></div></div><label class="check-row"><input type="checkbox" required><span>I confirm that the information is correct and consent to Kingship Christian Centre reviewing my audition for ministry recruitment purposes.</span></label><button class="btn btn-dark" type="submit">Submit Audition</button><div class="form-feedback" data-form-feedback tabindex="-1" aria-live="polite"></div></form></div></section></main>
-<footer class="site-footer"><div class="container footer-bottom"><p>© 2026 Kingship Christian Centre. All rights reserved.</p><p><a href="kingship-worship.html">Back to Kingship Worship</a></p></div></footer><script src="assets/js/navigation.js"></script><script src="assets/data/audition-categories.js"></script><script src="assets/js/auditions.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Apply for ongoing Kingship Worship auditions as a vocalist, musician, songwriter, producer, sound engineer or creative.">
+  <title>Auditions | Kingship Worship</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/auditions.css">
+
+  <style>
+    .hp-field {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      clip-path: inset(50%) !important;
+      white-space: nowrap !important;
+    }
+
+    .form-feedback {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      border-left: 4px solid currentColor;
+      background: #f3f3f3;
+      line-height: 1.55;
+    }
+
+    .form-feedback.is-info {
+      color: #3f3a2f;
+      background: #f7f0dc;
+    }
+
+    .form-feedback.is-success {
+      color: #155c34;
+      background: #e8f7ee;
+    }
+
+    .form-feedback.is-error {
+      color: #8b1f1f;
+      background: #fdecec;
+    }
+
+    .audition-form button[disabled] {
+      cursor: wait;
+      opacity: 0.65;
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/images/branding/logo-placeholder.svg" alt="Kingship Christian Centre placeholder logo">
+      <span class="brand-copy">
+        <strong>KINGSHIP</strong>
+        <small>CHRISTIAN CENTRE</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-navigation" data-nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="nav-dropdown" data-dropdown>
+        <button type="button" aria-expanded="false" data-dropdown-toggle>
+          The Thrive Generation <span>⌄</span>
+        </button>
+
+        <div class="dropdown-menu">
+          <a href="unithrive.html"><strong>UniThrive</strong></a>
+          <a href="prayer-ministry.html"><strong>The Prayer Ministry</strong></a>
+          <a href="thrive-in-two.html"><strong>Thrive In Two</strong></a>
+          <a href="kingship-worship.html"><strong>Kingship Worship</strong></a>
+        </div>
+      </div>
+
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a class="give-link" href="give.html">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="audition-hero">
+    <div class="container">
+      <p class="eyebrow light">Kingship Worship</p>
+      <h1>Auditions are <span>ongoing.</span></h1>
+      <p>
+        Submit a short audition video through WhatsApp, or complete the application form below.
+        We are looking for people who are gifted, teachable, committed and ready to grow spiritually and technically.
+      </p>
+
+      <div class="hero-actions">
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/27671160524?text=Hello%20Kingship%20Christian%20Centre%2C%20my%20name%20is%20____.%20I%20would%20like%20to%20submit%20my%20Kingship%20Worship%20audition%20video%20for%20the%20role%20of%20____."
+          target="_blank"
+          rel="noopener"
+        >
+          Submit Video on WhatsApp
+        </a>
+
+        <a class="btn btn-ghost" href="#audition-form">Apply Below</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading centered">
+        <p class="eyebrow">Choose Your Method</p>
+        <h2>Submit quickly on WhatsApp or complete the full form.</h2>
+      </div>
+
+      <div class="choice-grid">
+        <article class="choice-card">
+          <strong>Submit on WhatsApp</strong>
+          <p>Send your name, audition role and short video directly to the church WhatsApp number.</p>
+
+          <a
+            class="btn btn-dark"
+            href="https://wa.me/27671160524?text=Hello%20Kingship%20Christian%20Centre%2C%20my%20name%20is%20____.%20I%20would%20like%20to%20submit%20my%20Kingship%20Worship%20audition%20video%20for%20the%20role%20of%20____."
+            target="_blank"
+            rel="noopener"
+          >
+            Open WhatsApp
+          </a>
+        </article>
+
+        <div class="choice-or">OR</div>
+
+        <article class="choice-card">
+          <strong>Apply Below</strong>
+          <p>
+            Complete the full application and upload your video, or paste a Google Drive,
+            YouTube Unlisted or Dropbox link.
+          </p>
+          <a class="btn btn-outline" href="#audition-form">Go to Form</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Keep the Video Simple</p>
+        <h2>Clear, honest and short is enough.</h2>
+      </div>
+
+      <div class="instruction-grid">
+        <article>
+          <span>01</span>
+          <h3>Introduce Yourself</h3>
+          <p>Say your name and the role or instrument you are applying for.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Perform Briefly</h3>
+          <p>Sing or play a short worship piece for approximately 60–90 seconds.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Prioritise Clear Audio</h3>
+          <p>Use a quiet space. Professional equipment and heavy editing are not required.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Share Securely</h3>
+          <p>Upload MP4, MOV or WebM up to 25 MB, or paste a private shareable video link.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Open Roles</p>
+        <h2>Vocal, musical and creative opportunities.</h2>
+      </div>
+
+      <div class="role-cloud">
+        <span>Lead Vocalist</span>
+        <span>Soprano</span>
+        <span>Alto</span>
+        <span>Tenor</span>
+        <span>Keyboard</span>
+        <span>Drums</span>
+        <span>Bass Guitar</span>
+        <span>Lead Guitar</span>
+        <span>Acoustic Guitar</span>
+        <span>Songwriter</span>
+        <span>Producer</span>
+        <span>Sound Engineer</span>
+        <span>Photography</span>
+        <span>Videography</span>
+        <span>Media &amp; Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section" id="audition-form">
+    <div class="container audition-form-layout">
+      <aside class="form-side">
+        <p class="eyebrow">Application Form</p>
+        <h2>Tell us about your gift and availability.</h2>
+        <p>
+          Your details will be recorded for the Kingship Worship team.
+          Uploaded videos will be stored in the church Google Drive folder.
+        </p>
+
+        <div class="placeholder-note">
+          <strong>Large video?</strong>
+          Use a Google Drive, YouTube Unlisted or Dropbox link instead of uploading the file.
+        </div>
+
+        <p>
+          <strong>Need help?</strong><br>
+          <a href="tel:+27671160524">+27 67 116 0524</a>
+        </p>
+      </aside>
+
+      <form class="audition-form" id="kingship-audition-form" novalidate>
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="fullName">Full name *</label>
+            <input id="fullName" name="fullName" required autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="age">Age *</label>
+            <input id="age" name="age" type="number" min="13" max="100" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone / WhatsApp *</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="location">City or area *</label>
+            <input id="location" name="location" required autocomplete="address-level2">
+          </div>
+
+          <div class="field">
+            <label for="category">Audition category *</label>
+            <select id="category" name="category" required>
+              <option value="">Select a role</option>
+              <option>Lead Vocalist</option>
+              <option>Soprano</option>
+              <option>Alto</option>
+              <option>Tenor</option>
+              <option>Keyboard</option>
+              <option>Drums</option>
+              <option>Bass Guitar</option>
+              <option>Lead Guitar</option>
+              <option>Acoustic Guitar</option>
+              <option>Songwriter</option>
+              <option>Producer</option>
+              <option>Sound Engineer</option>
+              <option>Photography</option>
+              <option>Videography</option>
+              <option>Media &amp; Design</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rangeInstrument">Vocal range / instrument</label>
+            <input id="rangeInstrument" name="rangeInstrument" placeholder="Example: Alto, keyboard, drums">
+          </div>
+
+          <div class="field">
+            <label for="availability">Rehearsal availability *</label>
+            <select id="availability" name="availability" required>
+              <option value="">Choose availability</option>
+              <option>Weekday evenings</option>
+              <option>Saturday mornings</option>
+              <option>Saturday afternoons</option>
+              <option>Sunday before service</option>
+              <option>Flexible / to be discussed</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="experience">Tell us briefly about your experience</label>
+            <textarea id="experience" name="experience" placeholder="Church, choir, band, production, media or informal experience is welcome."></textarea>
+          </div>
+
+          <div class="field full">
+            <label for="motivation">Why would you like to join Kingship Worship? *</label>
+            <textarea id="motivation" name="motivation" required></textarea>
+          </div>
+        </div>
+
+        <div class="video-box">
+          <h3>Submit your audition video</h3>
+          <p>Upload your video or paste a Google Drive, YouTube Unlisted or Dropbox link.</p>
+
+          <div class="field">
+            <label for="auditionVideo">Upload your video</label>
+            <input
+              type="file"
+              id="auditionVideo"
+              name="auditionVideo"
+              accept="video/mp4,video/quicktime,video/webm"
+            >
+            <small>60–90 seconds. MP4, MOV or WebM.</small>
+          </div>
+
+          <div class="form-divider"><span>or</span></div>
+
+          <div class="field">
+            <label for="videoLink">Paste a video link</label>
+            <input
+              type="url"
+              id="videoLink"
+              name="videoLink"
+              placeholder="https://drive.google.com/... or unlisted YouTube / Dropbox link"
+            >
+          </div>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" name="consent" value="yes" required>
+          <span>
+            I confirm that the information is correct and consent to Kingship Christian Centre
+            reviewing my audition for ministry recruitment purposes.
+          </span>
+        </label>
+
+        <button class="btn btn-dark" type="submit">Submit Audition</button>
+
+        <div
+          class="form-feedback"
+          data-form-feedback
+          tabindex="-1"
+          aria-live="polite"
+          hidden
+        ></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© 2026 Kingship Christian Centre. All rights reserved.</p>
+    <p><a href="kingship-worship.html">Back to Kingship Worship</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/navigation.js" defer></script>
+
+<script>
+(() => {
+  "use strict";
+
+  const WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+  const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
+
+  const form = document.getElementById("kingship-audition-form");
+  const fileInput = document.getElementById("auditionVideo");
+  const videoLinkInput = document.getElementById("videoLink");
+  const feedback = document.querySelector("[data-form-feedback]");
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  function showFeedback(message, type = "info") {
+    feedback.textContent = message;
+    feedback.className = `form-feedback is-${type}`;
+    feedback.hidden = false;
+    feedback.focus({ preventScroll: true });
+  }
+
+  function setSubmitting(active) {
+    submitButton.disabled = active;
+    submitButton.textContent = active
+      ? "Submitting audition…"
+      : "Submit Audition";
+  }
+
+  function validateVideo() {
+    const file = fileInput.files[0];
+    const link = videoLinkInput.value.trim();
+
+    if (!file && !link) {
+      throw new Error(
+        "Please upload a short video or paste a Google Drive, YouTube Unlisted or Dropbox link."
+      );
+    }
+
+    if (file) {
+      const allowedTypes = [
+        "video/mp4",
+        "video/quicktime",
+        "video/webm"
+      ];
+
+      if (!allowedTypes.includes(file.type)) {
+        throw new Error("Please upload an MP4, MOV or WebM video.");
+      }
+
+      if (file.size > MAX_VIDEO_BYTES) {
+        throw new Error(
+          "This video is larger than 25 MB. Compress it or use a Drive, YouTube Unlisted or Dropbox link."
+        );
+      }
+    }
+  }
+
+  function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        const result = String(reader.result || "");
+        resolve(result.includes(",") ? result.split(",")[1] : result);
+      };
+
+      reader.onerror = () => reject(new Error("The video could not be read."));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function createPayload() {
+    const data = new FormData(form);
+    const file = fileInput.files[0] || null;
+
+    return {
+      formType: "kingship-worship-audition",
+      submittedAtClient: new Date().toISOString(),
+      fullName: String(data.get("fullName") || "").trim(),
+      age: String(data.get("age") || "").trim(),
+      phone: String(data.get("phone") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      location: String(data.get("location") || "").trim(),
+      category: String(data.get("category") || "").trim(),
+      rangeInstrument: String(data.get("rangeInstrument") || "").trim(),
+      availability: String(data.get("availability") || "").trim(),
+      experience: String(data.get("experience") || "").trim(),
+      motivation: String(data.get("motivation") || "").trim(),
+      videoLink: String(data.get("videoLink") || "").trim(),
+      consent: Boolean(data.get("consent")),
+      website: String(data.get("website") || "").trim(),
+      video: file
+        ? {
+            fileName: file.name,
+            mimeType: file.type,
+            size: file.size,
+            base64: await fileToBase64(file)
+          }
+        : null
+    };
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    feedback.hidden = true;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (WEB_APP_URL.includes("PASTE_YOUR")) {
+      showFeedback(
+        "Add the deployed Google Apps Script web-app URL inside this HTML file.",
+        "error"
+      );
+      return;
+    }
+
+    try {
+      validateVideo();
+      setSubmitting(true);
+      showFeedback("Preparing your audition…", "info");
+
+      const payload = await createPayload();
+
+      const response = await fetch(WEB_APP_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(payload),
+        redirect: "follow"
+      });
+
+      if (!response.ok) {
+        throw new Error(`Submission failed with status ${response.status}.`);
+      }
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "The audition could not be submitted.");
+      }
+
+      form.reset();
+
+      showFeedback(
+        `Thank you. Your audition reference is ${result.reference}.`,
+        "success"
+      );
+    } catch (error) {
+      console.error(error);
+
+      showFeedback(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again or use WhatsApp.",
+        "error"
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  });
+})();
+</script>
+</body>
+</html>
