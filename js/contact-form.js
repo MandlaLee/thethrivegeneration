@@ -1,0 +1,1 @@
+(()=>{const form=document.querySelector('[data-contact-form]');if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();const status=form.querySelector('[data-form-status]');status.textContent='Thank you. This form is currently in placeholder mode. Please use WhatsApp on 067 116 0524 for immediate contact.';status.classList.add('is-visible');form.reset();});})();
