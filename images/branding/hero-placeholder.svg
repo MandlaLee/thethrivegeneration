@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0d0c0a"/><stop offset=".55" stop-color="#59452b"/><stop offset="1" stop-color="#d2aa5c"/></linearGradient><filter id="b"><feGaussianBlur stdDeviation="28"/></filter></defs>
-<rect width="1600" height="1000" fill="url(#g)"/>
-<g opacity=".35" filter="url(#b)" fill="#f8e2b7"><circle cx="1110" cy="300" r="210"/><circle cx="1350" cy="620" r="260"/><circle cx="980" cy="780" r="150"/></g>
-<g opacity=".24" stroke="#fff" stroke-width="5"><path d="M900 950c120-260 220-460 430-720"/><path d="M1030 980c80-270 210-460 420-650"/></g>
-<text x="1130" y="520" text-anchor="middle" fill="#fff" opacity=".32" font-family="Arial" font-size="34" letter-spacing="8">HERO IMAGE PLACEHOLDER</text>
-</svg>
