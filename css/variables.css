@@ -1,0 +1,20 @@
+:root {
+  --black: #11100e;
+  --black-soft: #1b1916;
+  --ink: #27231f;
+  --white: #fdfdfd;
+  --off-white: #f6f2e9;
+  --cream: #eee6d8;
+  --gold: #d2aa5c;
+  --gold-dark: #9f7836;
+  --muted: #6f6961;
+  --line: rgba(17,16,14,.14);
+  --shadow: 0 24px 70px rgba(20,16,10,.12);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 30px;
+  --container: 1180px;
+  --header-height: 86px;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Oswald", Impact, sans-serif;
+}
