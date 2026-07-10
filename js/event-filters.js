@@ -1,1 +1,0 @@
-window.KCCEventFilters={apply(events,{search='',month='all',ministry='all'}={}){const q=search.trim().toLowerCase();return events.filter(e=>(month==='all'||e.date.slice(5,7)===month)&&(ministry==='all'||e.ministry===ministry)&&(!q||[e.title,e.ministry,e.theme,e.description].join(' ').toLowerCase().includes(q)))}};
