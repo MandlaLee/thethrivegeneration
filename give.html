@@ -13,28 +13,84 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">KINGSHIP <span>CHRISTIAN CENTRE</span></a>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="nav-dropdown">
-          <button class="dropdown-toggle">The Thrive Generation ▾</button>
-          <div class="dropdown-menu">
-            <a href="unithrive.html">UniThrive</a>
-            <a href="prayer-ministry.html">The Prayer Ministry</a>
-            <a href="thrive-in-two.html">Thrive In Two</a>
-            <a href="kingship-worship.html">Kingship Worship</a>
-          </div>
+ <header class="site-header" data-header>
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html"
+       aria-label="Kingship Christian Centre home">
+      <img
+        src="assets/images/branding/logo-placeholder.svg"
+        alt="Kingship Christian Centre placeholder logo"
+      >
+
+      <span class="brand-copy">
+        <strong>KINGSHIP</strong>
+        <small>CHRISTIAN CENTRE</small>
+      </span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      data-nav-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <nav
+      class="primary-nav"
+      id="primary-navigation"
+      aria-label="Primary navigation"
+      data-nav
+    >
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="nav-dropdown" data-dropdown>
+        <button
+          type="button"
+          aria-expanded="false"
+          data-dropdown-toggle
+        >
+          The Thrive Generation
+          <span aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="dropdown-menu">
+          <a href="unithrive.html">
+            <strong>UniThrive</strong>
+            <span>Campus ministry</span>
+          </a>
+
+          <a href="prayer-ministry.html">
+            <strong>The Prayer Ministry</strong>
+            <span>Prayer, revival and intercession</span>
+          </a>
+
+          <a href="thrive-in-two.html">
+            <strong>Thrive In Two</strong>
+            <span>Marriage and relationships</span>
+          </a>
+
+          <a href="kingship-worship.html">
+            <strong>Kingship Worship</strong>
+            <span>Worship and creative ministry</span>
+          </a>
         </div>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-give active" href="give.html">Give</a>
-      </nav>
-    </div>
-  </header>
+      </div>
+
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a class="give-link active" href="give.html">Give</a>
+    </nav>
+
+  </div>
+</header>
 
   <main>
     <section class="giving-hero">
@@ -130,5 +186,6 @@
   <script src="assets/data/partnership-options.js"></script>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/giving.js"></script>
+  <script src="assets/js/navigation.js" defer></script>
 </body>
 </html>
