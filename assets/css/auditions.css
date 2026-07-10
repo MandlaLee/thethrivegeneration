@@ -1,2 +1,939 @@
-.audition-hero{background:#111;color:#fff;padding:8rem 0 5rem;position:relative;overflow:hidden}.audition-hero:after{content:'AUDITIONS';position:absolute;right:-2rem;bottom:-2rem;font-family:var(--font-display);font-size:clamp(6rem,18vw,15rem);color:rgba(255,255,255,.035);line-height:1}.audition-hero .container{position:relative;z-index:1}.audition-hero h1{font-family:var(--font-display);font-size:clamp(3.7rem,9vw,7.5rem);text-transform:uppercase;line-height:.9;max-width:900px}.audition-hero h1 span{color:var(--gold)}.choice-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:stretch}.choice-card{border:1px solid #d9d2c6;padding:2rem;background:#fff}.choice-card strong{display:block;font-family:var(--font-display);font-size:2rem}.choice-or{align-self:center;font-family:var(--font-display);font-size:1.4rem}.instruction-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.instruction-grid article{background:#f3efe7;padding:1.5rem}.instruction-grid span{font-family:var(--font-display);font-size:2rem;color:#a57b2f}.audition-form-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:3rem;align-items:start}.form-side{position:sticky;top:7rem}.audition-form{background:#fff;border:1px solid #ddd6ca;padding:clamp(1.3rem,4vw,3rem)}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.field{display:grid;gap:.45rem;margin-bottom:1rem}.field.full{grid-column:1/-1}.field label{font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #bfb7aa;padding:.9rem 1rem;background:#fff;font:inherit}.field textarea{min-height:130px;resize:vertical}.video-box{border:2px dashed #b9a98e;padding:1.5rem;background:#faf7f1;margin:1rem 0}.video-box h3{margin-top:0}.form-divider{text-align:center;position:relative;margin:1.2rem 0}.form-divider:before{content:'';position:absolute;left:0;right:0;top:50%;border-top:1px solid #d6cfc3}.form-divider span{position:relative;background:#faf7f1;padding:0 .8rem}.check-row{display:flex;gap:.7rem;align-items:flex-start;margin:1rem 0}.form-feedback{outline:none;margin-top:1rem;padding:1rem;display:none}.form-feedback.error{display:block;background:#fff0f0;border:1px solid #c55}.form-feedback.success{display:block;background:#eef8ef;border:1px solid #6b9b70}.role-cloud{display:flex;flex-wrap:wrap;gap:.6rem}.role-cloud span{border:1px solid #d2cabd;padding:.6rem .8rem;background:#fff}.placeholder-note{background:#fff7df;border-left:4px solid var(--gold);padding:1rem;margin-top:1rem}
-@media(max-width:900px){.choice-grid{grid-template-columns:1fr}.choice-or{text-align:center}.instruction-grid{grid-template-columns:repeat(2,1fr)}.audition-form-layout{grid-template-columns:1fr}.form-side{position:static}}@media(max-width:600px){.field-grid,.instruction-grid{grid-template-columns:1fr}.audition-hero{padding-top:7rem}}
+/* =========================================================
+   KINGSHIP CHRISTIAN CENTRE
+   Kingship Worship Auditions
+   File: assets/css/auditions.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --audition-black: #111111;
+  --audition-soft-black: #1b1916;
+  --audition-charcoal: #272521;
+
+  --audition-gold: #d4ac5c;
+  --audition-gold-dark: #9b742c;
+  --audition-gold-light: #f0d998;
+
+  --audition-white: #ffffff;
+  --audition-off-white: #fdfcf9;
+  --audition-soft: #f7f6f3;
+  --audition-cream: #fff7df;
+
+  --audition-text: #25231f;
+  --audition-muted: #706b62;
+  --audition-line: #d8d2c6;
+
+  --audition-success: #17613a;
+  --audition-error: #982929;
+
+  --audition-radius: 0;
+  --audition-shadow: 0 22px 60px rgba(17, 17, 17, 0.1);
+}
+
+
+/* =========================================================
+   GENERAL PAGE ELEMENTS
+   ========================================================= */
+
+.audition-hero,
+.choice-card,
+.instruction-grid article,
+.audition-frame-shell,
+.audition-frame-fallback {
+  box-sizing: border-box;
+}
+
+.audition-hero .eyebrow,
+.audition-hero h1,
+.audition-hero p,
+.section-heading,
+.choice-card,
+.instruction-grid article,
+.role-cloud,
+.embedded-form-heading,
+.audition-frame-fallback {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow.light {
+  color: var(--audition-gold-light);
+}
+
+
+/* =========================================================
+   AUDITION HERO
+   ========================================================= */
+
+.audition-hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 690px;
+  overflow: hidden;
+  color: var(--audition-white);
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(212, 172, 92, 0.19),
+      transparent 34%
+    ),
+    linear-gradient(
+      115deg,
+      rgba(10, 10, 10, 0.98) 0%,
+      rgba(18, 17, 15, 0.95) 52%,
+      rgba(38, 33, 24, 0.88) 100%
+    );
+}
+
+.audition-hero::before {
+  content: "";
+  position: absolute;
+  top: -18%;
+  right: -9%;
+  width: min(620px, 70vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(212, 172, 92, 0.28);
+  border-radius: 50%;
+}
+
+.audition-hero::after {
+  content: "";
+  position: absolute;
+  right: 8%;
+  bottom: -30%;
+  width: min(460px, 60vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(212, 172, 92, 0.16);
+  border-radius: 50%;
+}
+
+.audition-hero .container {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(5rem, 10vw, 8rem);
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.audition-hero h1 {
+  max-width: 920px;
+  margin: 0.45rem 0 1.5rem;
+  color: var(--audition-white);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.audition-hero h1 span {
+  display: block;
+  color: var(--audition-gold);
+}
+
+.audition-hero > .container > p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.audition-hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.2rem;
+}
+
+.audition-hero .btn {
+  min-width: 210px;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   BUTTON VARIATIONS
+   ========================================================= */
+
+.btn-gold {
+  border: 1px solid var(--audition-gold);
+  background: var(--audition-gold);
+  color: var(--audition-black);
+}
+
+.btn-gold:hover,
+.btn-gold:focus-visible {
+  border-color: var(--audition-gold-light);
+  background: var(--audition-gold-light);
+  color: var(--audition-black);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: transparent;
+  color: var(--audition-white);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  border-color: var(--audition-white);
+  background: var(--audition-white);
+  color: var(--audition-black);
+}
+
+
+/* =========================================================
+   METHOD CHOICE SECTION
+   ========================================================= */
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: clamp(1.8rem, 4vw, 3rem);
+  border: 1px solid var(--audition-line);
+  background: var(--audition-white);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--audition-gold);
+  box-shadow: var(--audition-shadow);
+}
+
+.choice-card strong {
+  display: block;
+  color: var(--audition-black);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.choice-card p {
+  margin: 1.1rem 0 1.8rem;
+  color: var(--audition-muted);
+  line-height: 1.75;
+}
+
+.choice-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.choice-or {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  min-height: 54px;
+  align-self: center;
+  border: 1px solid var(--audition-gold);
+  border-radius: 50%;
+  background: var(--audition-cream);
+  color: var(--audition-gold-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   INSTRUCTIONS AND VALUES
+   ========================================================= */
+
+.instruction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.instruction-grid article {
+  min-height: 250px;
+  padding: 1.7rem;
+  border-top: 3px solid var(--audition-gold);
+  background: var(--audition-white);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.instruction-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.08);
+}
+
+.instruction-grid article > span {
+  display: block;
+  margin-bottom: 2.2rem;
+  color: var(--audition-gold-dark);
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.instruction-grid h3 {
+  margin: 0 0 0.8rem;
+  color: var(--audition-black);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.instruction-grid p {
+  margin: 0;
+  color: var(--audition-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.audition-values-section {
+  background:
+    linear-gradient(
+      135deg,
+      var(--audition-black),
+      var(--audition-soft-black)
+    );
+  color: var(--audition-white);
+}
+
+.audition-values-section .section-heading h2 {
+  color: var(--audition-white);
+}
+
+.audition-values-section .section-heading > p:last-child {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.audition-values-section .instruction-grid article {
+  border-color: var(--audition-gold);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.audition-values-section .instruction-grid h3 {
+  color: var(--audition-white);
+}
+
+.audition-values-section .instruction-grid p {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.audition-values-section .instruction-grid article > span {
+  color: var(--audition-gold-light);
+}
+
+
+/* =========================================================
+   OPEN ROLE CLOUD
+   ========================================================= */
+
+.role-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.3rem;
+}
+
+.role-cloud span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0.72rem 1.15rem;
+  border: 1px solid var(--audition-line);
+  background: var(--audition-white);
+  color: var(--audition-black);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.role-cloud span:hover {
+  transform: translateY(-2px);
+  border-color: var(--audition-gold);
+  background: var(--audition-gold);
+  color: var(--audition-black);
+}
+
+
+/* =========================================================
+   EMBEDDED GOOGLE APPLICATION
+   ========================================================= */
+
+.audition-embed-section {
+  overflow: hidden;
+  background: var(--audition-soft);
+}
+
+.embedded-form-heading {
+  max-width: 790px;
+  margin-bottom: 2.2rem;
+}
+
+.embedded-form-heading h2 {
+  margin: 0 0 1rem;
+}
+
+.embedded-form-heading p:last-child {
+  max-width: 720px;
+  color: var(--audition-muted);
+  line-height: 1.75;
+}
+
+.audition-frame-shell {
+  position: relative;
+  width: 100%;
+  min-height: 1000px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  background: var(--audition-white);
+  box-shadow: var(--audition-shadow);
+}
+
+.audition-frame-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  min-height: 600px;
+  padding: 3rem 1.5rem;
+  background:
+    linear-gradient(
+      120deg,
+      #ffffff,
+      #f8f5ed
+    );
+  color: var(--audition-muted);
+  text-align: center;
+}
+
+.audition-frame-loading::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 54px);
+  left: calc(50% - 18px);
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(212, 172, 92, 0.28);
+  border-top-color: var(--audition-gold-dark);
+  border-radius: 50%;
+  animation: audition-loading-spin 850ms linear infinite;
+}
+
+.audition-frame-loading p {
+  margin-top: 4rem;
+}
+
+.audition-frame-loading[hidden] {
+  display: none;
+}
+
+@keyframes audition-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.audition-application-frame {
+  display: block;
+  width: 100%;
+  min-height: 1650px;
+  border: 0;
+  background: var(--audition-white);
+}
+
+.audition-frame-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 1.15rem 1.3rem;
+  border-left: 4px solid var(--audition-gold);
+  background: var(--audition-cream);
+}
+
+.audition-frame-fallback p {
+  margin: 0;
+  color: var(--audition-text);
+}
+
+.audition-frame-fallback .btn {
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   HELP SECTION
+   ========================================================= */
+
+.audition-help-section {
+  background: var(--audition-white);
+}
+
+.audition-help-section .section-heading {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.audition-help-section .section-heading > p:not(.eyebrow) {
+  max-width: 680px;
+  margin-inline: auto;
+  color: var(--audition-muted);
+}
+
+.audition-help-section .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+
+/* =========================================================
+   SHARED FORM SUPPORT
+   Kept in case the embedded form is later brought back
+   into the native website.
+   ========================================================= */
+
+.audition-form-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.74fr) minmax(0, 1.3fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.form-side {
+  position: sticky;
+  top: 130px;
+}
+
+.form-side h2 {
+  margin: 0 0 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.form-side p {
+  color: var(--audition-muted);
+  line-height: 1.75;
+}
+
+.placeholder-note {
+  margin: 1.5rem 0;
+  padding: 1.1rem;
+  border-left: 4px solid var(--audition-gold);
+  background: var(--audition-cream);
+  color: var(--audition-text);
+}
+
+.audition-form {
+  padding: clamp(1.5rem, 4vw, 2.7rem);
+  border: 1px solid var(--audition-line);
+  background: var(--audition-white);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  color: var(--audition-black);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid #bbb4a8;
+  border-radius: 0;
+  outline: none;
+  background: var(--audition-white);
+  color: var(--audition-black);
+  font: inherit;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--audition-gold-dark);
+  box-shadow: 0 0 0 3px rgba(212, 172, 92, 0.18);
+}
+
+.video-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px dashed #b99d65;
+  background: #fbfaf7;
+}
+
+.video-box h3 {
+  margin: 0 0 0.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.video-box > p {
+  color: var(--audition-muted);
+}
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.3rem 0;
+  color: var(--audition-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--audition-line);
+}
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin: 1.5rem 0;
+  color: var(--audition-muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.check-row input {
+  flex: 0 0 auto;
+  width: auto;
+  margin-top: 0.25rem;
+  accent-color: var(--audition-gold-dark);
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid currentColor;
+  background: #f3f3f3;
+  line-height: 1.55;
+}
+
+.form-feedback[hidden] {
+  display: none;
+}
+
+.form-feedback.is-info {
+  color: #4b401f;
+  background: var(--audition-cream);
+}
+
+.form-feedback.is-success {
+  color: var(--audition-success);
+  background: #e8f7ee;
+}
+
+.form-feedback.is-error {
+  color: var(--audition-error);
+  background: #fdecec;
+}
+
+.audition-form button[disabled] {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.hp-field {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .instruction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .audition-form-layout {
+    gap: 2.5rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .audition-hero {
+    min-height: 610px;
+  }
+
+  .audition-hero h1 {
+    max-width: 760px;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-or {
+    margin-inline: auto;
+  }
+
+  .choice-card {
+    min-height: 240px;
+  }
+
+  .audition-frame-shell {
+    min-height: 1250px;
+  }
+
+  .audition-application-frame {
+    min-height: 1950px;
+  }
+
+  .audition-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-side {
+    position: static;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .audition-hero {
+    min-height: auto;
+  }
+
+  .audition-hero .container {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .audition-hero h1 {
+    font-size: clamp(3.4rem, 17vw, 5.4rem);
+    line-height: 0.92;
+  }
+
+  .audition-hero .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .audition-hero .btn {
+    width: 100%;
+  }
+
+  .choice-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .choice-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .instruction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instruction-grid article {
+    min-height: auto;
+  }
+
+  .role-cloud {
+    gap: 0.55rem;
+  }
+
+  .role-cloud span {
+    min-height: 40px;
+    padding: 0.62rem 0.85rem;
+    font-size: 0.68rem;
+  }
+
+  .audition-frame-shell {
+    min-height: 1550px;
+    margin-inline: -0.6rem;
+    width: calc(100% + 1.2rem);
+  }
+
+  .audition-application-frame {
+    min-height: 2250px;
+  }
+
+  .audition-frame-fallback {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .audition-frame-fallback .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .audition-help-section .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .audition-help-section .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .audition-form {
+    padding: 1.25rem;
+  }
+
+  .video-box {
+    padding: 1rem;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .audition-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .audition-frame-shell {
+    min-height: 1750px;
+  }
+
+  .audition-application-frame {
+    min-height: 2450px;
+  }
+
+  .role-cloud span {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .choice-card,
+  .instruction-grid article,
+  .role-cloud span,
+  .btn {
+    transition: none;
+  }
+
+  .audition-frame-loading::before {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+  .audition-hero,
+  .choice-grid,
+  .instruction-grid,
+  .role-cloud,
+  .audition-frame-fallback,
+  .audition-help-section {
+    break-inside: avoid;
+  }
+
+  .audition-frame-loading {
+    display: none !important;
+  }
+
+  .audition-application-frame {
+    min-height: 1100px;
+  }
+}
