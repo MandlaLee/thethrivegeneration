@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media | Kingship Christian Centre</title>
+  <meta name="description" content="Watch worship, teaching, ministry highlights, and creative media from Kingship Christian Centre.">
+  <link rel="canonical" href="https://kingshipcentre.co.za/media.html">
+  <meta property="og:title" content="Media | Kingship Christian Centre">
+  <meta property="og:description" content="Worship, teaching, ministry highlights, and creative media from The Thrive Generation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kingshipcentre.co.za/media.html">
+  <meta property="og:image" content="https://kingshipcentre.co.za/assets/images/media/media-hero-placeholder.svg">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KINGSHIP <span>CHRISTIAN CENTRE</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle">The Thrive Generation ▾</button>
+        <div class="dropdown-menu">
+          <a href="unithrive.html">UniThrive</a>
+          <a href="prayer-ministry.html">The Prayer Ministry</a>
+          <a href="thrive-in-two.html">Thrive In Two</a>
+          <a href="kingship-worship.html">Kingship Worship</a>
+        </div>
+      </div>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-give" href="give.html">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="media-hero">
+    <div class="container hero-content">
+      <p class="eyebrow">MEDIA & STORIES</p>
+      <h1>See what God is building through The Thrive Generation.</h1>
+      <p>Explore worship moments, teaching, ministry stories, event highlights, and creative expressions from Kingship Christian Centre.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <p class="eyebrow">FEATURED MEDIA</p>
+      <h2>Latest from Kingship</h2>
+    </div>
+    <div id="featuredMedia" class="featured-media"></div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="media-toolbar">
+        <div>
+          <p class="eyebrow">BROWSE</p>
+          <h2>Media library</h2>
+        </div>
+        <div class="filter-controls">
+          <input id="mediaSearch" type="search" placeholder="Search media">
+          <select id="mediaCategory">
+            <option value="all">All categories</option>
+            <option value="Worship">Worship</option>
+            <option value="Teaching">Teaching</option>
+            <option value="Prayer">Prayer</option>
+            <option value="UniThrive">UniThrive</option>
+            <option value="Thrive In Two">Thrive In Two</option>
+            <option value="Community">Community</option>
+          </select>
+        </div>
+      </div>
+      <div id="mediaGrid" class="media-grid"></div>
+      <p id="mediaEmpty" class="empty-state" hidden>No media items match your search.</p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <p class="eyebrow">FOLLOW THE JOURNEY</p>
+        <h2>Connect with Kingship online</h2>
+        <p>Follow the official social pages for new worship clips, announcements, teaching, and launch updates.</p>
+      </div>
+      <a class="btn btn-primary" href="contact.html#socials">View Social Links</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© 2026 Kingship Christian Centre.</p>
+    <p>The Thrive Generation · Launching September 2026</p>
+  </div>
+</footer>
+
+<script src="assets/data/media-data.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/media.js"></script>
+</body>
+</html>

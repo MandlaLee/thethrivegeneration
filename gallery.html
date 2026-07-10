@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Kingship Christian Centre</title>
+  <meta name="description" content="View worship, outreach, ministry, and community moments from Kingship Christian Centre.">
+  <link rel="canonical" href="https://kingshipcentre.co.za/gallery.html">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KINGSHIP <span>CHRISTIAN CENTRE</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle">The Thrive Generation ▾</button>
+        <div class="dropdown-menu">
+          <a href="unithrive.html">UniThrive</a>
+          <a href="prayer-ministry.html">The Prayer Ministry</a>
+          <a href="thrive-in-two.html">Thrive In Two</a>
+          <a href="kingship-worship.html">Kingship Worship</a>
+        </div>
+      </div>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-give" href="give.html">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="gallery-hero">
+    <div class="container hero-content">
+      <p class="eyebrow">PHOTO GALLERY</p>
+      <h1>Moments of worship, connection, service, and growth.</h1>
+      <p>This gallery is prepared for approved church photography. Replace the placeholders as official images become available.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="gallery-toolbar">
+      <div>
+        <p class="eyebrow">EXPLORE</p>
+        <h2>Life at Kingship</h2>
+      </div>
+      <select id="galleryCategory">
+        <option value="all">All moments</option>
+        <option value="Worship">Worship</option>
+        <option value="Prayer">Prayer</option>
+        <option value="Campus">Campus</option>
+        <option value="Relationships">Relationships</option>
+        <option value="Outreach">Outreach</option>
+        <option value="Leadership">Leadership</option>
+      </select>
+    </div>
+    <div id="galleryGrid" class="gallery-grid"></div>
+  </section>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close image">×</button>
+    <img id="lightboxImage" alt="">
+    <div class="lightbox-copy">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© 2026 Kingship Christian Centre.</p>
+    <p>Approved images only · Media consent required</p>
+  </div>
+</footer>
+
+<script src="assets/data/gallery-data.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>

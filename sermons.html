@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermons | Kingship Christian Centre</title>
+  <meta name="description" content="Watch and listen to sermons, teachings, and messages from Kingship Christian Centre.">
+  <link rel="canonical" href="https://kingshipcentre.co.za/sermons.html">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KINGSHIP <span>CHRISTIAN CENTRE</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle">The Thrive Generation ▾</button>
+        <div class="dropdown-menu">
+          <a href="unithrive.html">UniThrive</a>
+          <a href="prayer-ministry.html">The Prayer Ministry</a>
+          <a href="thrive-in-two.html">Thrive In Two</a>
+          <a href="kingship-worship.html">Kingship Worship</a>
+        </div>
+      </div>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-give" href="give.html">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="sermons-hero">
+    <div class="container hero-content">
+      <p class="eyebrow">SERMONS & TEACHING</p>
+      <h1>Biblical truth for spiritual growth, purpose, relationships, and kingdom living.</h1>
+      <p>Messages will be published here as Kingship Christian Centre begins services and ministry gatherings in September 2026.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <p class="eyebrow">FEATURED MESSAGE</p>
+      <h2>Latest teaching</h2>
+    </div>
+    <div id="featuredSermon" class="featured-sermon"></div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="media-toolbar">
+        <div><p class="eyebrow">MESSAGE LIBRARY</p><h2>Browse sermons</h2></div>
+        <div class="filter-controls">
+          <input id="sermonSearch" type="search" placeholder="Search messages">
+          <select id="sermonTopic">
+            <option value="all">All topics</option>
+            <option value="Identity">Identity</option>
+            <option value="Faith">Faith</option>
+            <option value="Prayer">Prayer</option>
+            <option value="Purpose">Purpose</option>
+            <option value="Relationships">Relationships</option>
+            <option value="Leadership">Leadership</option>
+          </select>
+        </div>
+      </div>
+      <div id="sermonGrid" class="media-grid"></div>
+    </div>
+  </section>
+
+  <section class="section container subscribe-panel">
+    <div>
+      <p class="eyebrow">NEW MESSAGES</p>
+      <h2>Follow the official YouTube channel</h2>
+      <p>Subscribe for sermons, worship sessions, prayer moments, and ministry updates.</p>
+    </div>
+    <a class="btn btn-primary" href="https://www.youtube.com/@KingshipChristianCentre" target="_blank" rel="noopener">Visit YouTube</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© 2026 Kingship Christian Centre.</p>
+    <p>Christ-centred teaching for The Thrive Generation</p>
+  </div>
+</footer>
+
+<script src="assets/data/sermons-data.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/sermons.js"></script>
+</body>
+</html>
