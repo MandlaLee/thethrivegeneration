@@ -1,0 +1,30 @@
+name: Ensure shared header behaviour
+
+on:
+  push:
+    branches: [header-consistency]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  ensure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: header-consistency
+          fetch-depth: 0
+      - name: Ensure header scripts on every page
+        run: python3 tools/ensure_header_scripts.py
+      - name: Commit shared behaviour
+        run: |
+          rm -f .github/workflows/ensure-header-scripts.yml tools/ensure_header_scripts.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Ensure consistent header behaviour across all pages"
+          git push origin HEAD:header-consistency
