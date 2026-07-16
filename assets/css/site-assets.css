@@ -1,0 +1,12 @@
+/* Supplied brand assets: site-wide header/footer logos and WhatsApp button */
+.site-header .brand{display:flex;align-items:center;gap:12px}
+.site-header .brand .site-logo{width:52px;height:52px;object-fit:cover;border-radius:12px;flex:0 0 auto}
+.site-footer .footer-supplied-logo{width:78px;height:78px;object-fit:cover;border-radius:16px;display:block;margin-bottom:18px}
+.site-footer .footer-logo-row{padding-top:36px;padding-bottom:12px}
+.site-footer .footer-logo-row .footer-supplied-logo{margin:0}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;width:82px;height:82px;z-index:2500;display:block;border-radius:50%;transition:transform .2s ease,filter .2s ease;filter:drop-shadow(0 10px 18px rgba(0,0,0,.30))}
+.whatsapp-float:hover,.whatsapp-float:focus-visible{transform:translateY(-4px) scale(1.04);filter:drop-shadow(0 14px 24px rgba(0,0,0,.38));outline:none}
+.whatsapp-float img{width:100%;height:100%;object-fit:contain;display:block}
+@media(max-width:680px){.site-header .brand .site-logo{width:43px;height:43px;border-radius:10px}.whatsapp-float{right:14px;bottom:14px;width:70px;height:70px}.site-footer .footer-supplied-logo{width:68px;height:68px}}
+
+.error-page-logo{display:inline-block;margin-bottom:24px}.error-page-logo img{width:92px;height:92px;object-fit:cover;border-radius:20px}

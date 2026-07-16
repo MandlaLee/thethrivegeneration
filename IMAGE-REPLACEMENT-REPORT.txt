@@ -1,0 +1,39 @@
+KINGSHIP CHRISTIAN CENTRE — IMAGE REPLACEMENT REPORT
+Updated: 12 July 2026
+
+COMPLETED
+- 30 HTML pages checked.
+- Site-wide header logo verified.
+- Site-wide footer logo verified on all standard pages.
+- 404 page uses the supplied Kingship logo.
+- WhatsApp button verified on all 30 pages and linked to +27 67 116 0524.
+- Apple touch icon, 16x16 favicon, 32x32 favicon, ICO favicon and web manifest verified on all 30 pages.
+- Existing supplied hero artwork verified across the site.
+- Homepage Pastor Jasper feature placeholder replaced.
+- Four leadership portraits replaced.
+- Three Thrive In Two advisor portraits replaced.
+- Thrive In Two couples image replaced.
+- Kingship Worship director portrait replaced.
+- Seven choir/member portraits replaced.
+- Full Kingship Worship team photograph replaced.
+- Six worship video thumbnails replaced.
+- Three Prayer Ministry images replaced.
+- UniThrive campus image replaced.
+- Four ministry overview card images replaced.
+- Six Media page card images replaced.
+- Eight Gallery images replaced.
+- One sermon thumbnail, “Faith That Moves,” added from the earlier generated image in this conversation.
+- Replaced image captions and alternative text cleaned up.
+- All local HTML, CSS, JavaScript, manifest and image paths checked.
+- No broken local asset references detected.
+- All PNG, WebP, ICO and JPG image files passed image integrity checks.
+
+STILL NEEDED
+Five 1600 x 900 px sermon thumbnails:
+1. Built for Purpose
+2. A Culture of Prayer
+3. Identity in Christ
+4. Building Healthy Relationships
+5. Leadership as Service
+
+The “Faith That Moves” sermon thumbnail is already installed.
