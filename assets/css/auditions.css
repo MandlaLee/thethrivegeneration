@@ -937,3 +937,7 @@
     min-height: 1100px;
   }
 }
+
+/* Supplied Kingship hero artwork */
+.audition-hero{background:linear-gradient(90deg,rgba(10,9,8,.93),rgba(10,9,8,.40)),url('../images/auditions.webp') center/cover no-repeat}
+.audition-hero.choir-hero{background-image:linear-gradient(90deg,rgba(10,9,8,.93),rgba(10,9,8,.40)),url('../images/worship.webp')}

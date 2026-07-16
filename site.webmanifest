@@ -2,7 +2,7 @@
   "name": "Kingship Christian Centre",
   "short_name": "Kingship",
   "description": "The Thrive Generation — a Christ-centred community launching in September 2026.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#111111",
