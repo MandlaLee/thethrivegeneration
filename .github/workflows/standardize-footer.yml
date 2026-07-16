@@ -1,0 +1,99 @@
+name: Standardize site footer
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  standardize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out footer branch
+        uses: actions/checkout@v4
+        with:
+          ref: footer-consistency
+          fetch-depth: 0
+
+      - name: Replace every site footer
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          css = """.kcc-global-footer{background:#0d0c0a;color:#fff;padding:80px 0 25px}.kcc-global-footer .footer-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:60px}.kcc-global-footer .footer-brand .brand{display:flex;align-items:center;gap:12px;color:#fff}.kcc-global-footer .footer-brand .footer-supplied-logo{width:78px;height:78px;object-fit:contain}.kcc-global-footer .brand-copy{display:flex;flex-direction:column;line-height:.92}.kcc-global-footer .brand-copy strong{font-family:var(--font-display);font-size:1.45rem;letter-spacing:.06em}.kcc-global-footer .brand-copy small{font-size:.55rem;letter-spacing:.19em;font-weight:700;margin-top:6px}.kcc-global-footer .footer-brand p{max-width:440px;color:#aaa297;margin-top:25px;line-height:1.75}.kcc-global-footer .footer-grid>div:not(:first-child){display:flex;flex-direction:column;align-items:flex-start;gap:10px}.kcc-global-footer .footer-grid h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 8px}.kcc-global-footer .footer-grid a{color:#c7c0b5;transition:color .2s ease}.kcc-global-footer .footer-grid a:hover{color:#fff}.kcc-global-footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:24px;padding-top:24px;margin-top:60px;color:#8f887e;font-size:.78rem}.kcc-global-footer .footer-bottom p{margin:0}.kcc-global-footer .footer-bottom a{color:#aaa297}.kcc-global-footer .footer-bottom a:hover{color:#fff}@media(max-width:980px){.kcc-global-footer .footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:680px){.kcc-global-footer{padding:60px 0 24px}.kcc-global-footer .footer-grid{grid-template-columns:1fr;gap:38px}.kcc-global-footer .footer-bottom{flex-direction:column;gap:8px;margin-top:45px}.kcc-global-footer .footer-brand .footer-supplied-logo{width:68px;height:68px}}"""
+
+          Path('assets/css').mkdir(parents=True, exist_ok=True)
+          Path('assets/css/site-footer.css').write_text(css + '\n', encoding='utf-8')
+
+          footer_pattern = re.compile(
+              r'<footer\b[^>]*class=["\'][^"\']*\bsite-footer\b[^"\']*["\'][^>]*>.*?</footer>',
+              re.I | re.S,
+          )
+          footer_css_pattern = re.compile(
+              r'\s*<link\b[^>]*href=["\'][^"\']*site-footer\.css["\'][^>]*/?>',
+              re.I,
+          )
+
+          def footer(prefix: str) -> str:
+              return f'''<footer class="site-footer kcc-global-footer">
+          <div class="container footer-grid">
+          <div class="footer-brand">
+          <a aria-label="Kingship Christian Centre home" class="brand brand-light" href="{prefix}index.html">
+          <img alt="Kingship Christian Centre" class="footer-supplied-logo" sizes="78px" src="{prefix}assets/images/branding/kingship-footer-logo.webp" srcset="{prefix}assets/images/branding/kingship-footer-logo.webp 800w, {prefix}assets/images/branding/kingship-footer-logo-1200.webp 1200w"/>
+          <span class="brand-copy"><strong>KINGSHIP</strong><small>CHRISTIAN CENTRE</small></span>
+          </a>
+          <p>Raising a generation of kingdom-minded believers who carry God’s presence, walk in spiritual maturity and influence society through worship, leadership, family and purpose.</p>
+          </div>
+          <div><h3>Explore</h3><a href="{prefix}about.html">About</a><a href="{prefix}events.html">Events</a><a href="{prefix}auditions.html">Auditions</a><a href="{prefix}contact.html">Contact</a><a href="{prefix}give.html">Give</a></div>
+          <div><h3>Ministries</h3><a href="{prefix}unithrive.html">UniThrive</a><a href="{prefix}kingship-worship.html">Kingship Worship</a><a href="{prefix}thrive-in-two.html">Thrive In Two</a><a href="{prefix}prayer-ministry.html">The Prayer Ministry</a></div>
+          <div><h3>Connect</h3><a href="https://facebook.com/KingshipChristianCentre" rel="noopener" target="_blank">Facebook</a><a href="https://www.instagram.com/kingshipchristiancentre/" rel="noopener" target="_blank">Instagram</a><a href="https://www.youtube.com/@KingshipChristianCentre" rel="noopener" target="_blank">YouTube</a><a href="https://www.tiktok.com/@kingshipcentre" rel="noopener" target="_blank">TikTok</a></div>
+          </div>
+          <div class="container footer-bottom"><p>© 2026 Kingship Christian Centre. All rights reserved.</p><p>Website designed &amp; developed by <a href="https://mandlalee.co.za" rel="noopener" target="_blank">MandlaLee</a>.</p></div>
+          </footer>'''
+
+          changed = []
+          missing = []
+          for path in sorted(Path('.').rglob('*.html')):
+              if '.git' in path.parts or '.github' in path.parts:
+                  continue
+              text = path.read_text(encoding='utf-8')
+              count = len(footer_pattern.findall(text))
+              if not count:
+                  missing.append(str(path))
+                  continue
+
+              depth = len(path.parent.parts) if str(path.parent) != '.' else 0
+              prefix = '../' * depth
+              updated = footer_pattern.sub(footer(prefix), text)
+              updated = footer_css_pattern.sub('', updated)
+              link = f'<link href="{prefix}assets/css/site-footer.css" rel="stylesheet"/>'
+              updated = updated.replace('</head>', link + '</head>', 1)
+
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(str(path))
+
+          print(f'Updated {len(changed)} HTML footer(s).')
+          for path in changed:
+              print(f'UPDATED: {path}')
+          print(f'HTML files without a site-footer: {len(missing)}')
+          for path in missing:
+              print(f'NO FOOTER: {path}')
+
+      - name: Remove one-time workflow and commit
+        shell: bash
+        run: |
+          rm -f .github/workflows/standardize-footer.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No footer changes found."
+            exit 0
+          fi
+          git commit -m "Standardize footer across website"
+          git push origin HEAD:footer-consistency
