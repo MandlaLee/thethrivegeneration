@@ -1,0 +1,445 @@
+KINGSHIP CHRISTIAN CENTRE — SITE CONNECTIVITY AUDIT
+==============================================================
+
+HTML pages found: 30
+Pages reachable from index.html: 21
+Expected special pages excluded from reachability: 1
+Orphaned pages: 8
+Pages with zero inbound links: 8
+Pages with only one inbound source: 4
+Broken internal page links: 0
+Missing internal assets/scripts: 0
+Links to missing anchors: 1
+
+REACHABLE PAGES
+--------------------------------------------------------------
+[OK] about.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] auditions.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] choir-members.html  <-  kingship-worship.html
+[OK] contact.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] event.html  <-  events.html
+[OK] events.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] give.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] index.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] kingship-worship.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] leadership.html  <-  about.html, leadership.html
+[OK] ministries.html  <-  404.html, event.html, kingship-worship.html, new-here.html, prayer-ministry.html, thrive-in-two.html, unithrive.html, vision-mission.html
+[OK] new-here.html  <-  index.html
+[OK] open-hands.html  <-  give.html, media.html, partner.html
+[OK] partner.html  <-  give.html, kingship-worship.html, ministries.html, partner.html, prayer-ministry.html, thrive-in-two.html, unithrive.html
+[OK] plan-your-visit.html  <-  index.html, new-here.html
+[OK] prayer-ministry.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] prayer-request.html  <-  index.html, new-here.html, prayer-ministry.html
+[OK] thrive-in-two-booking.html  <-  thrive-in-two.html
+[OK] thrive-in-two.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] unithrive.html  <-  404.html, about.html, auditions.html, choir-members.html, contact.html, culture.html, event.html, events.html, gallery.html, give.html, index.html, kingship-worship.html, leadership.html, media.html, ministries.html, new-here.html, open-hands.html, partner.html, plan-your-visit.html, prayer-ministry.html, prayer-request.html, privacy-policy.html, sermons.html, terms.html, testimonies.html, thrive-in-two-booking.html, thrive-in-two.html, unithrive.html, vision-mission.html, volunteer.html
+[OK] volunteer.html  <-  new-here.html, open-hands.html
+
+EXPECTED SPECIAL PAGES
+--------------------------------------------------------------
+[SPECIAL] 404.html — served by the host for invalid URLs
+
+ORPHANED / UNREACHABLE FROM HOMEPAGE
+--------------------------------------------------------------
+[ORPHAN] culture.html  <-  no inbound links anywhere
+[ORPHAN] gallery.html  <-  no inbound links anywhere
+[ORPHAN] media.html  <-  no inbound links anywhere
+[ORPHAN] privacy-policy.html  <-  no inbound links anywhere
+[ORPHAN] sermons.html  <-  no inbound links anywhere
+[ORPHAN] terms.html  <-  no inbound links anywhere
+[ORPHAN] testimonies.html  <-  no inbound links anywhere
+[ORPHAN] vision-mission.html  <-  no inbound links anywhere
+
+ZERO-INBOUND PAGES
+--------------------------------------------------------------
+[NO INBOUND] culture.html
+[NO INBOUND] gallery.html
+[NO INBOUND] media.html
+[NO INBOUND] privacy-policy.html
+[NO INBOUND] sermons.html
+[NO INBOUND] terms.html
+[NO INBOUND] testimonies.html
+[NO INBOUND] vision-mission.html
+
+PAGES WITH ONLY ONE INBOUND SOURCE
+--------------------------------------------------------------
+[ONE ROUTE] choir-members.html  <-  kingship-worship.html (a: choir-members.html)
+[ONE ROUTE] event.html  <-  events.html (script: event.html?id=${encodeURIComponent(e.id)}; script: event.html?id=${encodeURIComponent(next.id)})
+[ONE ROUTE] new-here.html  <-  index.html (a: new-here.html)
+[ONE ROUTE] thrive-in-two-booking.html  <-  thrive-in-two.html (a: thrive-in-two-booking.html; script: thrive-in-two-booking.html)
+
+BROKEN INTERNAL PAGE LINKS
+--------------------------------------------------------------
+None
+
+MISSING INTERNAL ASSETS OR SCRIPTS
+--------------------------------------------------------------
+None
+
+LINKS TO MISSING ANCHORS
+--------------------------------------------------------------
+[MISSING ANCHOR] media.html: contact.html#socials on contact.html
+
+FULL PAGE INBOUND SUMMARY
+--------------------------------------------------------------
+404.html: 0 inbound
+about.html: 30 inbound
+  - 404.html: a: about.html
+  - about.html: a: about.html
+  - auditions.html: a: about.html
+  - choir-members.html: a: about.html
+  - contact.html: a: about.html
+  - culture.html: a: about.html
+  - event.html: a: about.html
+  - events.html: a: about.html
+  - gallery.html: a: about.html
+  - give.html: a: about.html
+  - index.html: a: about.html; a: about.html#jasper-samuel
+  - kingship-worship.html: a: about.html
+  - leadership.html: a: about.html; a: about.html#jasper-samuel; script: about.html#jasper-samuel
+  - media.html: a: about.html; script: about.html
+  - ministries.html: a: about.html
+  - new-here.html: a: about.html
+  - open-hands.html: a: about.html
+  - partner.html: a: about.html
+  - plan-your-visit.html: a: about.html
+  - prayer-ministry.html: a: about.html
+  - prayer-request.html: a: about.html
+  - privacy-policy.html: a: about.html
+  - sermons.html: a: about.html
+  - terms.html: a: about.html
+  - testimonies.html: a: about.html
+  - thrive-in-two-booking.html: a: about.html
+  - thrive-in-two.html: a: about.html
+  - unithrive.html: a: about.html
+  - vision-mission.html: a: about.html
+  - volunteer.html: a: about.html
+auditions.html: 30 inbound
+  - 404.html: a: auditions.html
+  - about.html: a: auditions.html
+  - auditions.html: a: auditions.html
+  - choir-members.html: a: auditions.html
+  - contact.html: a: auditions.html
+  - culture.html: a: auditions.html
+  - event.html: a: auditions.html
+  - events.html: a: auditions.html
+  - gallery.html: a: auditions.html
+  - give.html: a: auditions.html
+  - index.html: a: auditions.html
+  - kingship-worship.html: a: auditions.html
+  - leadership.html: a: auditions.html
+  - media.html: a: auditions.html
+  - ministries.html: a: auditions.html
+  - new-here.html: a: auditions.html
+  - open-hands.html: a: auditions.html
+  - partner.html: a: auditions.html
+  - plan-your-visit.html: a: auditions.html
+  - prayer-ministry.html: a: auditions.html
+  - prayer-request.html: a: auditions.html
+  - privacy-policy.html: a: auditions.html
+  - sermons.html: a: auditions.html
+  - terms.html: a: auditions.html
+  - testimonies.html: a: auditions.html
+  - thrive-in-two-booking.html: a: auditions.html
+  - thrive-in-two.html: a: auditions.html
+  - unithrive.html: a: auditions.html
+  - vision-mission.html: a: auditions.html
+  - volunteer.html: a: auditions.html
+choir-members.html: 1 inbound
+  - kingship-worship.html: a: choir-members.html
+contact.html: 30 inbound
+  - 404.html: a: contact.html
+  - about.html: a: contact.html
+  - auditions.html: a: contact.html
+  - choir-members.html: a: contact.html
+  - contact.html: a: contact.html
+  - culture.html: a: contact.html
+  - event.html: a: contact.html
+  - events.html: a: contact.html
+  - gallery.html: a: contact.html
+  - give.html: a: contact.html
+  - index.html: a: contact.html
+  - kingship-worship.html: a: contact.html
+  - leadership.html: a: contact.html
+  - media.html: a: contact.html; a: contact.html#socials
+  - ministries.html: a: contact.html
+  - new-here.html: a: contact.html
+  - open-hands.html: a: contact.html
+  - partner.html: a: contact.html
+  - plan-your-visit.html: a: contact.html
+  - prayer-ministry.html: a: contact.html
+  - prayer-request.html: a: contact.html
+  - privacy-policy.html: a: contact.html
+  - sermons.html: a: contact.html
+  - terms.html: a: contact.html
+  - testimonies.html: a: contact.html
+  - thrive-in-two-booking.html: a: contact.html
+  - thrive-in-two.html: a: contact.html
+  - unithrive.html: a: contact.html
+  - vision-mission.html: a: contact.html
+  - volunteer.html: a: contact.html
+culture.html: 0 inbound
+event.html: 1 inbound
+  - events.html: script: event.html?id=${encodeURIComponent(e.id)}; script: event.html?id=${encodeURIComponent(next.id)}
+events.html: 30 inbound
+  - 404.html: a: events.html
+  - about.html: a: events.html
+  - auditions.html: a: events.html
+  - choir-members.html: a: events.html
+  - contact.html: a: events.html
+  - culture.html: a: events.html
+  - event.html: a: events.html; script: events.html
+  - events.html: a: events.html
+  - gallery.html: a: events.html
+  - give.html: a: events.html
+  - index.html: a: events.html
+  - kingship-worship.html: a: events.html
+  - leadership.html: a: events.html
+  - media.html: a: events.html
+  - ministries.html: a: events.html
+  - new-here.html: a: events.html
+  - open-hands.html: a: events.html
+  - partner.html: a: events.html
+  - plan-your-visit.html: a: events.html
+  - prayer-ministry.html: a: events.html
+  - prayer-request.html: a: events.html
+  - privacy-policy.html: a: events.html
+  - sermons.html: a: events.html
+  - terms.html: a: events.html
+  - testimonies.html: a: events.html
+  - thrive-in-two-booking.html: a: events.html
+  - thrive-in-two.html: a: events.html
+  - unithrive.html: a: events.html
+  - vision-mission.html: a: events.html
+  - volunteer.html: a: events.html
+gallery.html: 0 inbound
+give.html: 30 inbound
+  - 404.html: a: give.html
+  - about.html: a: give.html
+  - auditions.html: a: give.html
+  - choir-members.html: a: give.html
+  - contact.html: a: give.html
+  - culture.html: a: give.html
+  - event.html: a: give.html
+  - events.html: a: give.html
+  - gallery.html: a: give.html
+  - give.html: a: give.html
+  - index.html: a: give.html
+  - kingship-worship.html: a: give.html
+  - leadership.html: a: give.html
+  - media.html: a: give.html
+  - ministries.html: a: give.html
+  - new-here.html: a: give.html
+  - open-hands.html: a: give.html
+  - partner.html: a: give.html
+  - plan-your-visit.html: a: give.html
+  - prayer-ministry.html: a: give.html
+  - prayer-request.html: a: give.html
+  - privacy-policy.html: a: give.html
+  - sermons.html: a: give.html
+  - terms.html: a: give.html
+  - testimonies.html: a: give.html
+  - thrive-in-two-booking.html: a: give.html
+  - thrive-in-two.html: a: give.html
+  - unithrive.html: a: give.html
+  - vision-mission.html: a: give.html
+  - volunteer.html: a: give.html
+index.html: 30 inbound
+  - 404.html: a: index.html
+  - about.html: a: index.html
+  - auditions.html: a: index.html
+  - choir-members.html: a: index.html
+  - contact.html: a: index.html
+  - culture.html: a: index.html
+  - event.html: a: index.html
+  - events.html: a: index.html
+  - gallery.html: a: index.html
+  - give.html: a: index.html
+  - index.html: a: index.html
+  - kingship-worship.html: a: index.html
+  - leadership.html: a: index.html
+  - media.html: a: index.html
+  - ministries.html: a: index.html
+  - new-here.html: a: index.html
+  - open-hands.html: a: index.html
+  - partner.html: a: index.html
+  - plan-your-visit.html: a: index.html
+  - prayer-ministry.html: a: index.html
+  - prayer-request.html: a: index.html
+  - privacy-policy.html: a: index.html
+  - sermons.html: a: index.html
+  - terms.html: a: index.html
+  - testimonies.html: a: index.html
+  - thrive-in-two-booking.html: a: index.html
+  - thrive-in-two.html: a: index.html
+  - unithrive.html: a: index.html
+  - vision-mission.html: a: index.html
+  - volunteer.html: a: index.html
+kingship-worship.html: 30 inbound
+  - 404.html: a: kingship-worship.html
+  - about.html: a: kingship-worship.html
+  - auditions.html: a: kingship-worship.html
+  - choir-members.html: a: kingship-worship.html
+  - contact.html: a: kingship-worship.html
+  - culture.html: a: kingship-worship.html
+  - event.html: a: kingship-worship.html
+  - events.html: a: kingship-worship.html
+  - gallery.html: a: kingship-worship.html
+  - give.html: a: kingship-worship.html; script: kingship-worship.html
+  - index.html: a: kingship-worship.html
+  - kingship-worship.html: a: kingship-worship.html
+  - leadership.html: a: kingship-worship.html
+  - media.html: a: kingship-worship.html
+  - ministries.html: a: kingship-worship.html; script: kingship-worship.html
+  - new-here.html: a: kingship-worship.html
+  - open-hands.html: a: kingship-worship.html
+  - partner.html: a: kingship-worship.html; script: kingship-worship.html
+  - plan-your-visit.html: a: kingship-worship.html
+  - prayer-ministry.html: a: kingship-worship.html
+  - prayer-request.html: a: kingship-worship.html
+  - privacy-policy.html: a: kingship-worship.html
+  - sermons.html: a: kingship-worship.html
+  - terms.html: a: kingship-worship.html
+  - testimonies.html: a: kingship-worship.html
+  - thrive-in-two-booking.html: a: kingship-worship.html
+  - thrive-in-two.html: a: kingship-worship.html
+  - unithrive.html: a: kingship-worship.html
+  - vision-mission.html: a: kingship-worship.html
+  - volunteer.html: a: kingship-worship.html
+leadership.html: 2 inbound
+  - about.html: a: leadership.html
+  - leadership.html: script: leadership.html#chichi; script: leadership.html#mandla; script: leadership.html#thapelo
+media.html: 0 inbound
+ministries.html: 8 inbound
+  - 404.html: a: ministries.html
+  - event.html: a: ministries.html
+  - kingship-worship.html: a: ministries.html
+  - new-here.html: a: ministries.html
+  - prayer-ministry.html: a: ministries.html
+  - thrive-in-two.html: a: ministries.html
+  - unithrive.html: a: ministries.html
+  - vision-mission.html: a: ministries.html
+new-here.html: 1 inbound
+  - index.html: a: new-here.html
+open-hands.html: 3 inbound
+  - give.html: script: open-hands.html
+  - media.html: script: open-hands.html
+  - partner.html: script: open-hands.html
+partner.html: 7 inbound
+  - give.html: a: partner.html; script: partner.html
+  - kingship-worship.html: a: partner.html
+  - ministries.html: a: partner.html
+  - partner.html: script: partner.html
+  - prayer-ministry.html: a: partner.html
+  - thrive-in-two.html: a: partner.html
+  - unithrive.html: a: partner.html
+plan-your-visit.html: 2 inbound
+  - index.html: a: plan-your-visit.html
+  - new-here.html: a: plan-your-visit.html
+prayer-ministry.html: 30 inbound
+  - 404.html: a: prayer-ministry.html
+  - about.html: a: prayer-ministry.html
+  - auditions.html: a: prayer-ministry.html
+  - choir-members.html: a: prayer-ministry.html
+  - contact.html: a: prayer-ministry.html
+  - culture.html: a: prayer-ministry.html
+  - event.html: a: prayer-ministry.html
+  - events.html: a: prayer-ministry.html
+  - gallery.html: a: prayer-ministry.html
+  - give.html: a: prayer-ministry.html; script: prayer-ministry.html
+  - index.html: a: prayer-ministry.html
+  - kingship-worship.html: a: prayer-ministry.html
+  - leadership.html: a: prayer-ministry.html
+  - media.html: a: prayer-ministry.html; script: prayer-ministry.html
+  - ministries.html: a: prayer-ministry.html; script: prayer-ministry.html
+  - new-here.html: a: prayer-ministry.html
+  - open-hands.html: a: prayer-ministry.html
+  - partner.html: a: prayer-ministry.html; script: prayer-ministry.html
+  - plan-your-visit.html: a: prayer-ministry.html
+  - prayer-ministry.html: a: prayer-ministry.html
+  - prayer-request.html: a: prayer-ministry.html
+  - privacy-policy.html: a: prayer-ministry.html
+  - sermons.html: a: prayer-ministry.html
+  - terms.html: a: prayer-ministry.html
+  - testimonies.html: a: prayer-ministry.html
+  - thrive-in-two-booking.html: a: prayer-ministry.html
+  - thrive-in-two.html: a: prayer-ministry.html
+  - unithrive.html: a: prayer-ministry.html
+  - vision-mission.html: a: prayer-ministry.html
+  - volunteer.html: a: prayer-ministry.html
+prayer-request.html: 3 inbound
+  - index.html: a: prayer-request.html
+  - new-here.html: a: prayer-request.html
+  - prayer-ministry.html: a: prayer-request.html
+privacy-policy.html: 0 inbound
+sermons.html: 0 inbound
+terms.html: 0 inbound
+testimonies.html: 0 inbound
+thrive-in-two-booking.html: 1 inbound
+  - thrive-in-two.html: a: thrive-in-two-booking.html; script: thrive-in-two-booking.html
+thrive-in-two.html: 30 inbound
+  - 404.html: a: thrive-in-two.html
+  - about.html: a: thrive-in-two.html
+  - auditions.html: a: thrive-in-two.html
+  - choir-members.html: a: thrive-in-two.html
+  - contact.html: a: thrive-in-two.html
+  - culture.html: a: thrive-in-two.html
+  - event.html: a: thrive-in-two.html
+  - events.html: a: thrive-in-two.html
+  - gallery.html: a: thrive-in-two.html
+  - give.html: a: thrive-in-two.html; script: thrive-in-two.html
+  - index.html: a: thrive-in-two.html
+  - kingship-worship.html: a: thrive-in-two.html
+  - leadership.html: a: thrive-in-two.html
+  - media.html: a: thrive-in-two.html; script: thrive-in-two.html
+  - ministries.html: a: thrive-in-two.html; script: thrive-in-two.html
+  - new-here.html: a: thrive-in-two.html
+  - open-hands.html: a: thrive-in-two.html
+  - partner.html: a: thrive-in-two.html; script: thrive-in-two.html
+  - plan-your-visit.html: a: thrive-in-two.html
+  - prayer-ministry.html: a: thrive-in-two.html
+  - prayer-request.html: a: thrive-in-two.html
+  - privacy-policy.html: a: thrive-in-two.html
+  - sermons.html: a: thrive-in-two.html
+  - terms.html: a: thrive-in-two.html
+  - testimonies.html: a: thrive-in-two.html
+  - thrive-in-two-booking.html: a: thrive-in-two.html
+  - thrive-in-two.html: a: thrive-in-two.html
+  - unithrive.html: a: thrive-in-two.html
+  - vision-mission.html: a: thrive-in-two.html
+  - volunteer.html: a: thrive-in-two.html
+unithrive.html: 30 inbound
+  - 404.html: a: unithrive.html
+  - about.html: a: unithrive.html
+  - auditions.html: a: unithrive.html
+  - choir-members.html: a: unithrive.html
+  - contact.html: a: unithrive.html
+  - culture.html: a: unithrive.html
+  - event.html: a: unithrive.html
+  - events.html: a: unithrive.html
+  - gallery.html: a: unithrive.html
+  - give.html: a: unithrive.html; script: unithrive.html
+  - index.html: a: unithrive.html
+  - kingship-worship.html: a: unithrive.html
+  - leadership.html: a: unithrive.html
+  - media.html: a: unithrive.html; script: unithrive.html
+  - ministries.html: a: unithrive.html; script: unithrive.html
+  - new-here.html: a: unithrive.html
+  - open-hands.html: a: unithrive.html
+  - partner.html: a: unithrive.html; script: unithrive.html
+  - plan-your-visit.html: a: unithrive.html
+  - prayer-ministry.html: a: unithrive.html
+  - prayer-request.html: a: unithrive.html
+  - privacy-policy.html: a: unithrive.html
+  - sermons.html: a: unithrive.html
+  - terms.html: a: unithrive.html
+  - testimonies.html: a: unithrive.html
+  - thrive-in-two-booking.html: a: unithrive.html
+  - thrive-in-two.html: a: unithrive.html
+  - unithrive.html: a: unithrive.html
+  - vision-mission.html: a: unithrive.html
+  - volunteer.html: a: unithrive.html
+vision-mission.html: 0 inbound
+volunteer.html: 2 inbound
+  - new-here.html: a: volunteer.html
+  - open-hands.html: a: volunteer.html
