@@ -1,1 +1,1 @@
-DO NOT REMOVE THIS FOLDER or this txt after using the assets assigned to you. hey senai. i'll use this folder to upload documentss, images or zips i want you to integrate into the website.
+DO NOT REMOVE THIS FOLDER or this txt after using the assets assigned to you. hey senai. i'll use this folder to upload documentss, images or zips i want you to integrate into the website. You can delete or move the assigned assets to where you want them permanently, only keep the folder and the txt behind.
