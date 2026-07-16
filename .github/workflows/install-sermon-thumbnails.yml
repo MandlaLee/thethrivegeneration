@@ -1,0 +1,83 @@
+name: Install sermon thumbnails
+
+on:
+  push:
+    branches:
+      - agent/add-sermon-thumbnails
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/add-sermon-thumbnails
+          fetch-depth: 0
+
+      - name: Install validation dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Decode and install thumbnails
+        shell: bash
+        run: |
+          cat .tmp-sermon-upload/chunk-*.b64 | tr -d '\n\r' | base64 --decode > /tmp/sermon-thumbnails.zip
+          unzip -o /tmp/sermon-thumbnails.zip -d assets/images/media/
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          data_path = Path("assets/data/sermons-data.js")
+          text = data_path.read_text(encoding="utf-8")
+          replacements = {
+              "assets/images/media/sermon-01.svg": "assets/images/media/sermon-01.webp",
+              "assets/images/media/sermon-03.svg": "assets/images/media/sermon-03.webp",
+              "assets/images/media/sermon-04.svg": "assets/images/media/sermon-04.webp",
+              "assets/images/media/sermon-05.svg": "assets/images/media/sermon-05.webp",
+              "assets/images/media/sermon-06.svg": "assets/images/media/sermon-06.webp",
+              "Launch-series placeholder message on identity, calling, spiritual growth, and purposeful living.": "Launch-series message on identity, calling, spiritual growth, and purposeful living.",
+              "Placeholder message on intercession, fasting, revival, and building strong prayer altars.": "A message on intercession, fasting, revival, and building strong prayer altars.",
+              "Placeholder message on spiritual identity, confidence, and living under the authority of Christ.": "A message on spiritual identity, confidence, and living under the authority of Christ.",
+              "Placeholder teaching on honour, communication, healing, wisdom, and covenant-centred relationships.": "Teaching on honour, communication, healing, wisdom, and covenant-centred relationships.",
+              "Placeholder message on stewardship, humility, character, excellence, and responsibility.": "A message on stewardship, humility, character, excellence, and responsibility.",
+          }
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f"Expected placeholder not found: {old}")
+              text = text.replace(old, new)
+          data_path.write_text(text, encoding="utf-8")
+
+          expected = [
+              Path("assets/images/media/sermon-01.webp"),
+              Path("assets/images/media/sermon-03.webp"),
+              Path("assets/images/media/sermon-04.webp"),
+              Path("assets/images/media/sermon-05.webp"),
+              Path("assets/images/media/sermon-06.webp"),
+          ]
+          for path in expected:
+              if not path.exists():
+                  raise SystemExit(f"Missing installed image: {path}")
+              with Image.open(path) as image:
+                  if image.format != "WEBP":
+                      raise SystemExit(f"{path} is not WebP")
+                  if image.size != (1600, 900):
+                      raise SystemExit(f"{path} has unexpected size {image.size}")
+          print("All sermon thumbnails validated.")
+          PY
+
+      - name: Clean relay files and commit
+        shell: bash
+        run: |
+          rm -rf .tmp-sermon-upload
+          rm -f .github/workflows/install-sermon-thumbnails.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+            exit 0
+          fi
+          git commit -m "Add completed sermon thumbnails"
+          git push origin HEAD:agent/add-sermon-thumbnails
