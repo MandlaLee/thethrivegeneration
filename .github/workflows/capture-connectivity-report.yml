@@ -1,0 +1,113 @@
+name: Capture repaired connectivity report
+
+on:
+  push:
+    branches: [audit-page-connectivity]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit-page-connectivity
+          fetch-depth: 0
+
+      - name: Reapply repair and capture full report
+        shell: python
+        run: |
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.parse import urlsplit, unquote
+          import textwrap
+
+          workflow = Path('.github/workflows/fix-site-connectivity.yml').read_text(encoding='utf-8').splitlines()
+          start = next(i for i, line in enumerate(workflow) if '- name: Connect all public pages' in line)
+          run_line = next(i for i in range(start, len(workflow)) if workflow[i].strip() == 'run: |')
+          base_indent = len(workflow[run_line]) - len(workflow[run_line].lstrip())
+          code_lines = []
+          for line in workflow[run_line + 1:]:
+              indent = len(line) - len(line.lstrip())
+              if line.strip() and indent <= base_indent:
+                  break
+              code_lines.append(line)
+          exec(compile(textwrap.dedent('\n'.join(code_lines)), '<repair>', 'exec'))
+
+          root = Path('.')
+          pages = {p.name: p for p in root.glob('*.html')}
+          links = {name: [] for name in pages}
+          anchors = {name: set() for name in pages}
+          broken, missing = [], []
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.hrefs=[]; self.ids=set()
+              def handle_starttag(self, tag, attrs):
+                  attrs=dict(attrs)
+                  if 'id' in attrs: self.ids.add(attrs['id'])
+                  if tag == 'a' and 'href' in attrs: self.hrefs.append(attrs['href'])
+
+          parsers = {}
+          for name, path in pages.items():
+              parser=Parser(); parser.feed(path.read_text(encoding='utf-8')); parsers[name]=parser; anchors[name]=parser.ids
+
+          for name, parser in parsers.items():
+              for href in parser.hrefs:
+                  if not href: continue
+                  if href.startswith('#'):
+                      if href[1:] and href[1:] not in anchors[name]: missing.append((name,name,href[1:]))
+                      continue
+                  if href.startswith(('http://','https://','mailto:','tel:','javascript:')): continue
+                  parsed=urlsplit(href); target=unquote(Path(parsed.path).name)
+                  if not target.endswith('.html'): continue
+                  if target not in pages: broken.append((name,href)); continue
+                  links[name].append(target)
+                  if parsed.fragment and parsed.fragment not in anchors[target]: missing.append((name,target,parsed.fragment))
+
+          js='\n'.join(p.read_text(encoding='utf-8',errors='ignore') for p in root.rglob('*.js'))
+          if 'event.html' in js: links['events.html'].append('event.html')
+          if 'thrive-in-two-booking.html' in js: links['thrive-in-two.html'].append('thrive-in-two-booking.html')
+
+          reachable=set(); stack=['index.html']
+          while stack:
+              page=stack.pop()
+              if page in reachable: continue
+              reachable.add(page); stack.extend(t for t in links.get(page,[]) if t not in reachable)
+
+          orphaned=sorted(set(pages)-reachable-{'404.html'})
+          inbound={name:set() for name in pages}
+          for source, targets in links.items():
+              for target in targets: inbound[target].add(source)
+          weak={page:len(inbound[page]) for page in ('new-here.html','choir-members.html') if len(inbound[page]) < 2}
+
+          lines = [
+              'KINGSHIP SITE CONNECTIVITY — POST-REPAIR REPORT',
+              '=' * 58,
+              f'HTML pages: {len(pages)}',
+              f'Reachable from index.html: {len(reachable)}',
+              f'Orphaned pages: {orphaned or "None"}',
+              f'Broken internal links: {broken or "None"}',
+              f'Missing anchors: {missing or "None"}',
+              f'Weak single-route pages: {weak or "None"}',
+              '',
+              'INBOUND SOURCE COUNTS',
+              '-' * 58,
+          ]
+          for page in sorted(pages):
+              lines.append(f'{page}: {len(inbound[page])} — {", ".join(sorted(inbound[page])) or "no inbound links"}')
+          Path('CONNECTIVITY-REPORT.txt').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+      - name: Remove temporary workflows and commit diagnostic state
+        shell: bash
+        run: |
+          rm -f .github/workflows/fix-site-connectivity.yml .github/workflows/capture-connectivity-report.yml SITE-CONNECTIVITY-AUDIT.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Repair site navigation and capture verification"
+          git push origin HEAD:audit-page-connectivity
